@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: nginx-certificates-greyroom-net-production
+  namespace: nginx-test
+spec:
+  secretName: nginx-certificates-greyroom-net-production
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "nginx.greyroom.net"
+  dnsNames:
+    - "nginx.greyroom.net"
