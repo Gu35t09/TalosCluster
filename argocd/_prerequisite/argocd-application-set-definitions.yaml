@@ -1,4 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: apps-definitions
+spec:
+  sourceRepos: []
+  sourceNamespaces: []
+  destinations: []
+  namespaceResourceBlacklist:
+  - group: '*'
+    kind: '*'
+---
+apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: apps-definitions
@@ -16,7 +28,7 @@ spec:
     metadata:
       name: '{{.path.basename}}'
     spec:
-      project: "app-definitions"
+      project: "apps-definitions"
       source:
         repoURL: https://github.com/Gu35t09/TalosCluster.git
         targetRevision: HEAD
