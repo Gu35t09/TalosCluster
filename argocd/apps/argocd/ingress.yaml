@@ -16,6 +16,6 @@ spec:
           service:
             name:  argocd-server
             port:
-              number: 80
+              number: 443
   tls:
   - secretName: argocd-certificates-greyroom-net-production # <=== Use the name defined in Certificate resource.
