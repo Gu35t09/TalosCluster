@@ -7,7 +7,7 @@ metadata:
 spec:
   secretName: longhorn-certificates-greyroom-net-production
   issuerRef:
-    name: issuer-longhorn-system
+    name: issuer-letsencrypt-production
     kind: ClusterIssuer
   commonName: "longhorn.greyroom.net"
   dnsNames:
