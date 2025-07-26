@@ -35,6 +35,7 @@ spec:
         path: '{{.path.path}}'
       destination:
         server: https://kubernetes.default.svc
+        namespace: '{{.path.basename}}'
       syncPolicy:
         automated:
           prune: true
@@ -42,3 +43,4 @@ spec:
         syncOptions:
           - ApplyOutOfSyncOnly=true
           - RespectIgnoreDifferences=true
+          - CreateNamespace=true
