@@ -15,9 +15,9 @@ machine:
           tpm: {}
   kubelet:
     extraMounts:
-      - destination: /var/mnt/storage
+      - destination: /var/lib/longhorn
         type: bind
-        source: /var/mnt/storage
+        source: /var/lib/longhorn
         options:
           - bind
           - rshared
@@ -26,3 +26,10 @@ machine:
       - device: ${additional_disk_1}
         partitions:
           - mountpoint: /var/mnt/storage # Where to mount the partition.
+    sysctls:
+    vm.nr_hugepages: "1024"
+  kernel:
+    modules:
+      - name: nvme_tcp
+      - name: vfio_pci
+#     - name: uio_pci_generic

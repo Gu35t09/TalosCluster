@@ -23,8 +23,8 @@ worker_network_bridge = "vmbr0"
 
 
 # Talos configuration
-iso_download_url = "https://factory.talos.dev/image/ce4c980550dd2ab1b17bbf2b08801c7eb59418eafe8f279833297925d67c7515/v1.10.5/metal-amd64-secureboot.iso"
-installation_image = "factory.talos.dev/metal-installer-secureboot/ce4c980550dd2ab1b17bbf2b08801c7eb59418eafe8f279833297925d67c7515:v1.10.5"
+iso_download_url = "https://factory.talos.dev/image/88d1f7a5c4f1d3aba7df787c448c1d3d008ed29cfb34af53fa0df4336a56040b/v1.10.5/metal-amd64-secureboot.iso"
+installation_image = "factory.talos.dev/metal-installer-secureboot/88d1f7a5c4f1d3aba7df787c448c1d3d008ed29cfb34af53fa0df4336a56040b:v1.10.5"
 cluster_name = "talos-proxmox-cluster"
 control_planes_ip = ["192.168.100.201"]
 worker_ip = ["192.168.100.204"]
