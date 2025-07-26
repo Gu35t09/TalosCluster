@@ -16,7 +16,7 @@ spec:
     metadata:
       name: '{{.path.basename}}'
     spec:
-      project: "default"
+      project: "app-definitions"
       source:
         repoURL: https://github.com/Gu35t09/TalosCluster.git
         targetRevision: HEAD
