@@ -452,7 +452,7 @@ longhorn:
     #  label-key2: "label-value2"
   longhornUI:
     # -- Replica count for Longhorn UI.
-    replicas: 2
+    replicas: 1
     # -- PriorityClass for Longhorn UI.
     priorityClass: *defaultPriorityClassNameRef
     # -- Affinity for Longhorn UI pods. Specify the affinity you want to use for Longhorn UI.
