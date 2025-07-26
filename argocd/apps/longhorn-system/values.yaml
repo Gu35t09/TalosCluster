@@ -487,7 +487,7 @@ longhorn:
     enabled: true ## MODIFIES
     # -- IngressClass resource that contains ingress configuration, including the name of the Ingress controller.
     # ingressClassName can replace the kubernetes.io/ingress.class annotation used in earlier Kubernetes releases.
-    ingressClassName: traefik ## MODIFIED
+    #ingressClassName: traefik ## MODIFIED
     # -- Hostname of the Layer 7 load balancer.
     host: longhorn.greyroom.net ## MODIFIED
     # -- Setting that allows you to enable TLS on ingress records.
