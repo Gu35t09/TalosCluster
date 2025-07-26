@@ -2,13 +2,13 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: test-certificates-greyroom-net-production
+  name: longhorn-certificates-greyroom-net-production
   namespace: letsencrypt-production
 spec:
-  secretName: test-certificates-greyroom-net-production
+  secretName: longhorn-certificates-greyroom-net-production
   issuerRef:
     name: issuer-letsencrypt-production
     kind: ClusterIssuer
-  commonName: "test.greyroom.net"
+  commonName: "longhorn.greyroom.net"
   dnsNames:
-    - "test.greyroom.net"
+    - "longhorn.greyroom.net"
