@@ -23,7 +23,7 @@ spec:
               mountPath: /etc/linkding/data
       volumes:
         - name: linkding-data
-          persistentVolumeClaim:
-            claimName: linkding-data-pvc
-        
+          hostPath:
+            path: /var/mnt/storage
+            type: DirectoryOrCreate
 
