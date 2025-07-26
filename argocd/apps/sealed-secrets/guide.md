@@ -1,0 +1,1 @@
+Install kubeseal: https://github.com/bitnami-labs/sealed-secrets/releases

@@ -24,3 +24,4 @@ kubectl apply -k https://github.com/argoproj/argo-cd/manifests/crds\?ref\=stable
 # Update argocd ConfigMap for MetalLB
 kubectl apply -f argocd-update-cm.yaml
 
+
