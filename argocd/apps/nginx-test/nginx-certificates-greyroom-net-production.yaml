@@ -9,6 +9,6 @@ spec:
   issuerRef:
     name: issuer-letsencrypt-production
     kind: ClusterIssuer
-  commonName: "nginx.greyroom.net"
+  commonName: "nginx-test.greyroom.net"
   dnsNames:
-    - "nginx.greyroom.net"
+    - "nginx-test.greyroom.net"
