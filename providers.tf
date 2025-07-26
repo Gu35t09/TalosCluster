@@ -2,11 +2,11 @@ terraform {
   required_providers {
     proxmox = {
       source = "bpg/proxmox"
-      version = "0.70.0"
+      version = "0.80.0"
     }
     talos = {
       source = "siderolabs/talos"
-      version = "0.7.1"
+      version = "0.9.0-alpha.0"
     }
   }
 }
@@ -17,7 +17,7 @@ provider "proxmox" {
 
   ssh {
     agent = true
-    username = "root"
+    username = "terraform"
   }
 }
 

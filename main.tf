@@ -13,7 +13,7 @@ resource "proxmox_virtual_environment_vm" "cp-vm" {
   ]
   count = var.cp_total_count # repeat this task for cp_total_count times
   vm_id = sum([var.starting_cp_vm_id, count.index])
-  name = "talos-cp-0${count.index+1}"
+  name = "k8s-talos-cp0${count.index+1}"
   node_name = var.cp_proxmox_nodes[count.index]
   bios = "ovmf"
   on_boot = true
@@ -67,7 +67,7 @@ resource "proxmox_virtual_environment_vm" "worker-vm" {
   ]
   count = var.worker_total_count
   vm_id = sum([var.starting_worker_vm_id, count.index]) # For example the first worker if we start with VMID 201 and have 3 control plane would have the VMID 204 (201+0+3=204)
-  name = "talos-wrk-0${count.index+1}"
+  name = "k8s-talos-wrk0${count.index+1}"
   node_name = var.worker_proxmox_nodes[count.index]
   bios = "ovmf"
   on_boot = true
