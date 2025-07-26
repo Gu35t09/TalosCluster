@@ -24,4 +24,8 @@ kubectl apply -k https://github.com/argoproj/argo-cd/manifests/crds\?ref\=stable
 # Update argocd ConfigMap for MetalLB
 kubectl apply -f argocd-update-cm.yaml
 
+Install kubeseal: https://github.com/bitnami-labs/sealed-secrets/releases
 
+# Importare le chiavi RSA usate per la creazione dei vari secret nel cluster
+kubectl -n sealed-secrets create secret tls "mycustomkeys" --cert="mytls.cert" --key="mytls.key"
+kubectl -n sealed-secrets label secret "mycustomkeys" sealedsecrets.bitnami.com/sealed-secrets-key=active
