@@ -1,11 +1,11 @@
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
   name: linkding-data-pvc
 spec:
-  storageClassName: local-storage
-  resources:
-    requests:
-      storage: 5Gi
   accessModes:
     - ReadWriteOnce
+  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 1Gi
