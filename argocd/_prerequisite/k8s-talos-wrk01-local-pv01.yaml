@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: talos-wrk-01-local-pv-01
+  name: k8s-talos-wrk01-local-pv01
 spec:
   capacity:
     storage: 50Gi
@@ -19,4 +19,4 @@ spec:
             - key: kubernetes.io/hostname
               operator: In
               values:
-                - talos-wrk-01
+                - k8s-talos-wrk01
