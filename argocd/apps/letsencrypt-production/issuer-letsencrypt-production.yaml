@@ -13,9 +13,6 @@ spec:
       - dns01:
           cloudflare:
             email: mattia.vallortigara@protonmail.com
-            apiTokenSecretRef:
-              name: cloudflare-token-secret
-              key: cloudflare-token
-        selector:
-          dnsZones:
-            - "greyroom.net"
+            apiKeySecretRef:
+              name: cloudflare-api-key-secret
+              key: api-key
