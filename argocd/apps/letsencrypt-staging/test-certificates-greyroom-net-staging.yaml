@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: test-certificates-greyroom-net-staging
+  namespace: letsencrypt-staging
+spec:
+  secretName: test-certificates-greyroom-net-staging
+  issuerRef:
+    name: issuer-letsencrypt-staging
+    kind: ClusterIssuer
+  commonName: "test.greyroom.net"
+  dnsNames:
+    - "test.greyroom.net"
