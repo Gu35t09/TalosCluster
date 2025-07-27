@@ -1,0 +1,10 @@
+kind: PersistentVolumeClaim
+metadata:
+  name: paperless-ngx-pvc-media
+  namespace: paperless-ngx
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
