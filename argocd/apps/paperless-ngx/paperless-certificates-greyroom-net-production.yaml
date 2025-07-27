@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: paperless-certificates-greyroom-net-production
+  namespace: paperless-ngx
+spec:
+  secretName: paperless-certificates-greyroom-net-production
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "paperless.greyroom.net"
+  dnsNames:
+    - "paperless.greyroom.net"
