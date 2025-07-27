@@ -14,11 +14,17 @@ spec:
       labels:
         app: paperless-ngx
     spec:
-#      initContainers:
-#      - name: wait-for-db
-#        image: busybox:1.37
-#        command: ['sh', '-c', 'until nc -z paperless-ngx-db-app 5432; do echo "Waiting for Postgres..."; sleep 5; done']
-#        imagePullPolicy: IfNotPresent
+      initContainers:
+      - name: wait-for-db
+        image: busybox:1.37
+        command: ['sh', '-c', 'until nc -z DBHOST 5432; do echo "Waiting for Postgres..."; sleep 5; done']
+        env:
+        - name: PAPERLESS_DBHOST
+          valueFrom:
+            secretKeyRef:
+              key: host
+              name: paperless-ngx-db-app
+        imagePullPolicy: IfNotPresent
       containers:
       - name: paperless-ngx
         image: ghcr.io/paperless-ngx/paperless-ngx:latest
@@ -31,7 +37,10 @@ spec:
         - name: PAPERLESS_REDIS
           value: redis://redis-service:6379
         - name: PAPERLESS_DBHOST
-          value: db
+          valueFrom:
+            secretKeyRef:
+              key: host
+              name: paperless-ngx-db-app
         - name: PAPERLESS_DBNAME
           valueFrom:
             secretKeyRef:
