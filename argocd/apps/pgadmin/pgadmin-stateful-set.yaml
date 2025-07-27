@@ -36,10 +36,10 @@ spec:
            containerPort: 80
            protocol: TCP
          volumeMounts:
-         - name: pgadmin-config
-           mountPath: /pgadmin4/servers.json
-           subPath: servers.json
-           readOnly: true
+         #- name: pgadmin-config
+         #  mountPath: /pgadmin4/servers.json
+         #  subPath: servers.json
+         #  readOnly: true
          - name: pgadmin-data
            mountPath: /var/lib/pgadmin
      volumes:
