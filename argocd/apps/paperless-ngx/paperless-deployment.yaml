@@ -14,11 +14,11 @@ spec:
       labels:
         app: paperless-ngx
     spec:
-      initContainers:
-      - name: wait-for-db
-        image: busybox:1.37
-        command: ['sh', '-c', 'until nc -z paperless-ngx-db-app 5432; do echo "Waiting for Postgres..."; sleep 5; done']
-        imagePullPolicy: IfNotPresent
+#      initContainers:
+#      - name: wait-for-db
+#        image: busybox:1.37
+#        command: ['sh', '-c', 'until nc -z paperless-ngx-db-app 5432; do echo "Waiting for Postgres..."; sleep 5; done']
+#        imagePullPolicy: IfNotPresent
       containers:
       - name: paperless-ngx
         image: ghcr.io/paperless-ngx/paperless-ngx:latest
