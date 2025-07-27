@@ -1,0 +1,96 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paperless-ngx
+  namespace: paperless-ngx
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: paperless-ngx
+  template:
+    metadata:
+      labels:
+        app: paperless-ngx
+    spec:
+      initContainers:
+      - name: wait-for-db
+        image: busybox:1.37
+        command: ['sh', '-c', 'until nc -z db 5432; do echo "Waiting for Postgres..."; sleep 5; done']
+        imagePullPolicy: IfNotPresent
+      containers:
+      - name: paperless-ngx
+        image: ghcr.io/paperless-ngx/paperless-ngx:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: PAPERLESS_OCR_LANGUAGES
+          value: jpn
+        - name: PAPERLESS_OCR_LANGUAGE
+          value: eng+jpn
+        - name: PAPERLESS_REDIS
+          value: redis://redis-service:6379
+        - name: PAPERLESS_DBHOST
+          value: db
+        - name: PAPERLESS_DBNAME
+          valueFrom:
+            secretKeyRef:
+              key: dbname
+              name: paperless-ngx-db-app
+        - name: PAPERLESS_DBUSER
+          valueFrom:
+            secretKeyRef:
+              key: user
+              name: paperless-ngx-db-app
+        - name: PAPERLESS_URL
+          value: https://paperless.greyroom.net
+        - name: PAPERLESS_CSRF_TRUSTED_ORIGINS
+          value: https://paperless.greyroom.net
+        - name: PAPERLESS_DBPASS
+          valueFrom:
+            secretKeyRef:
+              name: paperless-ngx-db-app
+              key:  password
+        - name: PAPERLESS_ADMIN_USER
+          valueFrom:
+            secretKeyRef:
+              name: paperless-ngx-secrets
+              key: PAPERLESS_ADMIN_USER
+        - name: PAPERLESS_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: paperless-ngx-secrets
+              key: PAPERLESS_ADMIN_PASSWORD
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: media
+          mountPath: /usr/src/paperless/media
+        - name: consume
+          mountPath: /usr/src/paperless/consume
+        startupProbe:
+          tcpSocket:
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 6
+        livenessProbe:
+          tcpSocket:
+            port: 8000
+        readinessProbe:
+          tcpSocket:
+            port: 8000
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "4Gi"
+            cpu: "2"
+      volumes:
+      - name: media
+        persistentVolumeClaim:
+          claimName: paperless-ngx-pvc-media
+      - name: consume
+        persistentVolumeClaim:
+          claimName: paperless-ngx-pvc-consume
