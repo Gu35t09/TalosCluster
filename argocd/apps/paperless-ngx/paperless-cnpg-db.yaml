@@ -1,0 +1,16 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: paperless-ngx-db
+spec:
+  instances: 1
+
+  bootstrap:
+    initdb:
+      database: paperless-ngx
+      owner: app
+      secret:
+        name: paperless-cnpg-db-app-password
+      
+  storage:
+    size: 1Gi
