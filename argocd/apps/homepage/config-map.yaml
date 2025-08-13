@@ -95,7 +95,6 @@ data:
               description: Ubuntu server with Docker engine installed
               proxmoxNode: pve
               proxmoxVMID: 204
-              proxmoxType: lxc
 
   widgets.yaml: |
     - resources:
