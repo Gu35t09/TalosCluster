@@ -9,7 +9,7 @@ data:
   proxmox.yaml: |
     url: https://pve.greyroom.net:8006
     token: ${PROXMOX_API_TOKEN}
-    secret: ${PROXMOX_API_SECRET
+    secret: ${PROXMOX_API_SECRET}
   kubernetes.yaml: |
     mode: cluster
   settings.yaml: |
