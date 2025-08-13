@@ -98,6 +98,6 @@ data:
 
   docker.yaml: ""
   proxmox.yaml: |
-    url: https://pve.greyroom.net:8006
-    token: $PROXMOX_API_TOKEN
-    secret: $PROXMOX_API_SECRET
+    url: https://proxmox.greyroom.net:8006
+    token: ${PROXMOX_API_TOKEN}
+    secret: ${PROXMOX_API_SECRET}
