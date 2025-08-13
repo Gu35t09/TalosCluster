@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: homepage
 data:
   proxmox.yaml: |
-    url: https://proxmox.greyroom.net:8006
+    url: https://pve.greyroom.net:8006
     token: ${PROXMOX_API_TOKEN}
     secret: ${PROXMOX_API_SECRET
   kubernetes.yaml: |
