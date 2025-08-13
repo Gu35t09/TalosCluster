@@ -8,7 +8,7 @@ metadata:
 data:
   proxmox.yaml: |
     url: https://pve.greyroom.net:8006
-    token: ({HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
+    token: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
     secret: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
   kubernetes.yaml: |
     mode: cluster
