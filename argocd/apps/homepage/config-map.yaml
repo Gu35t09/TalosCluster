@@ -77,7 +77,7 @@ data:
               href: https://youtube.com/
 
   services.yaml: |
-    - Proxmox VM
+    - Proxmox VM:
       - Kubernetes Cluster:
           - k8s-talos-cp01:
               icon: proxmox.png
