@@ -81,6 +81,17 @@ data:
               href: https://youtube.com/
 
   services.yaml: |
+    - Hypervisor:
+        - Tartarus:
+            icon: proxmox.png
+            href: https://pve.greyroom.net:8006
+            description: Proxmox VE
+            widget:
+                type: proxmox
+                url: https://tartarus.greyroom.net:8006
+                username: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
+                password: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
+
     - Important Proxmox VM:
       - Kubernetes Cluster:
           - k8s-talos-cp01:
