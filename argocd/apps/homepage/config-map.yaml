@@ -29,10 +29,6 @@ data:
     useEqualHeights: true
 
     layout:
-      Important Proxmox VM:
-        header: true
-        style: row
-        columns: 2
       Hypervisor:
         header: true
         style: row
@@ -91,25 +87,23 @@ data:
                 url: https://pve.greyroom.net:8006
                 username: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
                 password: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
-
-    - Important Proxmox VM:
-      - Kubernetes Cluster:
-          - k8s-talos-cp01:
-              icon: proxmox.png
-              description: Talos Cluster Control Plane 01
-              proxmoxNode: pve
-              proxmoxVMID: 201
-          - k8s-talos-wrk01:
-              icon: proxmox.png
-              description: Talos Cluster Worker 01
-              proxmoxNode: pve
-              proxmoxVMID: 204
-      - Other:
-          - pandora:
-              icon: proxmox.png
-              description: Ubuntu server with Docker engine installed
-              proxmoxNode: pve
-              proxmoxVMID: 204
+    - Kubernetes Cluster:
+        - k8s-talos-cp01:
+            icon: proxmox.png
+            description: Talos Cluster Control Plane 01
+            proxmoxNode: pve
+            proxmoxVMID: 201
+        - k8s-talos-wrk01:
+            icon: proxmox.png
+            description: Talos Cluster Worker 01
+            proxmoxNode: pve
+            proxmoxVMID: 204
+    - Docker host:
+        - pandora:
+            icon: proxmox.png
+            description: Ubuntu server with Docker engine installed
+            proxmoxNode: pve
+            proxmoxVMID: 204
 
   widgets.yaml: |
     - resources:
