@@ -29,6 +29,10 @@ data:
     useEqualHeights: true
 
     layout:
+      Important Proxmox VM:
+        header: true
+        style: row
+        columns: 2
       Hypervisor:
         header: true
         style: row
