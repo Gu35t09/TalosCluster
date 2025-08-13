@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: homepage-certificates-greyroom-net-production
+  namespace: homepage
+spec:
+  secretName: homepage-certificates-greyroom-net-production
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "homepage.greyroom.net"
+  dnsNames:
+    - "homepage.greyroom.net"
