@@ -77,7 +77,7 @@ data:
               href: https://youtube.com/
 
   services.yaml: |
-    - Proxmox VM:
+    - Important Proxmox VM:
       - Kubernetes Cluster:
           - k8s-talos-cp01:
               icon: proxmox.png
@@ -90,6 +90,12 @@ data:
               proxmoxNode: pve
               proxmoxVMID: 204
       - Other:
+          - pandora:
+              icon: proxmox.png
+              description: Ubuntu server with Docker engine installed
+              proxmoxNode: pve
+              proxmoxVMID: 204
+              proxmoxType: lxc
 
   widgets.yaml: |
     - resources:
