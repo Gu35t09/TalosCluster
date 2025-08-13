@@ -88,7 +88,7 @@ data:
             description: Proxmox VE
             widget:
                 type: proxmox
-                url: https://tartarus.greyroom.net:8006
+                url: https://pve.greyroom.net:8006
                 username: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
                 password: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
 
