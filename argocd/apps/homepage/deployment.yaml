@@ -26,7 +26,8 @@ spec:
         - name: homepage
           image: "ghcr.io/gethomepage/homepage:latest"
           imagePullPolicy: Always
-          command: ['touch /app/config/proxmox.yaml','echo "url: https://pve.greyroom.net" >> /app/config/proxmox.yaml && echo "token: $PROXMOX_API_TOKEN" >> /app/config/proxmox.yaml && echo "secret: $PROXMOX_API_SECRET" >> /app/config/proxmox.yaml']
+          command: ['/bin/sh', "-c", 'echo "url: https://pve.greyroom.net" >> /app/config/proxmox.yaml && echo "token: $PROXMOX_API_TOKEN" >> /app/config/proxmox.yaml && echo "secret: $PROXMOX_API_SECRET" >> /app/config/proxmox.yaml && sleep 10']
+          args: []
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
               value: homepage.greyroom.net # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
