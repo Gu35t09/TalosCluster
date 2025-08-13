@@ -74,6 +74,12 @@ data:
               href: https://youtube.com/
 
   services.yaml: |
+    - Promox VM:
+        - k8s-talos-cp01
+          icon: proxmox.png
+          description: Talos Cluster Control Plane 01
+          proxmoxNode: pve
+          proxmoxVMID: 201
 
   widgets.yaml: |
     - resources:
