@@ -29,6 +29,16 @@ spec:
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
               value: homepage.greyroom.net # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+            - name: PROXMOX_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  key: token
+                  name: proxmox-api-secret
+            - name: PROXMOX_API_SECRET
+              valueFrom:
+                secretKeyRef:
+                  key: secret
+                  name: proxmox-api-secret
           ports:
             - name: http
               containerPort: 3000
