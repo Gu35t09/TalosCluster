@@ -70,7 +70,7 @@ spec:
               subPath: widgets.yaml
             - mountPath: /app/config/proxmox.yaml
               name: homepage-config
-              subpath: proxmox.yaml
+              subPath: proxmox.yaml
             - mountPath: /app/config/logs
               name: logs
 
