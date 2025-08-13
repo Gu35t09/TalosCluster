@@ -77,17 +77,19 @@ data:
               href: https://youtube.com/
 
   services.yaml: |
-    - Kubernetes VM:
-        - k8s-talos-cp01:
-            icon: proxmox.png
-            description: Talos Cluster Control Plane 01
-            proxmoxNode: pve
-            proxmoxVMID: 201
-        - k8s-talos-wrk01:
-            icon: proxmox.png
-            description: Talos Cluster Worker 01
-            proxmoxNode: pve
-            proxmoxVMID: 204
+    - Proxmox VM
+      - Kubernetes Cluster:
+          - k8s-talos-cp01:
+              icon: proxmox.png
+              description: Talos Cluster Control Plane 01
+              proxmoxNode: pve
+              proxmoxVMID: 201
+          - k8s-talos-wrk01:
+              icon: proxmox.png
+              description: Talos Cluster Worker 01
+              proxmoxNode: pve
+              proxmoxVMID: 204
+      - Other:
 
   widgets.yaml: |
     - resources:
