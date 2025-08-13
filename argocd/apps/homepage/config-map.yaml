@@ -10,8 +10,8 @@ data:
     url: https://pve.greyroom.net:8006
     token: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
     secret: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
-  kubernetes.yaml: |
-    mode: cluster
+  #kubernetes.yaml: |
+  #  mode: cluster
   settings.yaml: |
     title: My Awesome Homepage 
     theme: dark # <----- add this line
@@ -78,12 +78,17 @@ data:
               href: https://youtube.com/
 
   services.yaml: |
-    - Promox VM:
+    - Kubernetes VM:
         - k8s-talos-cp01:
             icon: proxmox.png
             description: Talos Cluster Control Plane 01
             proxmoxNode: pve
             proxmoxVMID: 201
+        - k8s-talos-wrk01:
+            icon: proxmox.png
+            description: Talos Cluster Worker 01
+            proxmoxNode: pve
+            proxmoxVMID: 204
 
   widgets.yaml: |
     - resources:
