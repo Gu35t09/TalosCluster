@@ -35,12 +35,10 @@ data:
         columns: 1
       Backup:
       Databases:
+      Docker
       Kubernetes:
       Networking:
       Services:
-        header: true
-        style: row
-        columns: 4
 
   custom.css: ""
   custom.js: ""
@@ -98,6 +96,24 @@ data:
             icon: pgadmin.png
             href: https://pgadmin.greyroom.net/
             description: PostgreSQL Tools
+    - Docker:
+        - Portainer:
+            icon: portainer.png
+            href: https://portainer.greyroom.net
+            description: Container management software
+            widget:
+                type: portainer
+                url: https://portainer.greyroom.net
+                env: 2
+                key: "{{HOMEPAGE_VAR_PORTAINER_API_TOKEN}}"
+        - What's up Docker:
+            icon: whats-up-docker.png
+            href: https://wud.greyroom.net
+            description: Notification system for docker update
+            widget:
+                type: whatsupdocker
+                url: https://wud.greyroom.net
+
     - Kubernetes:
         - ArgoCD:
             icon: argo-cd.png
@@ -167,15 +183,6 @@ data:
                 type: pihole
                 url: https://pihole.greyroom.net
                 key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
-        - Portainer:
-            icon: portainer.png
-            href: https://portainer.greyroom.net
-            description: Container management software
-            widget:
-                type: portainer
-                url: https://portainer.greyroom.net
-                env: 2
-                key: "{{HOMEPAGE_VAR_PORTAINER_API_TOKEN}}"
         - Vaultwarden:
             icon: vaultwarden.png
             href: https://vaultwarden.greyroom.net
@@ -184,14 +191,6 @@ data:
             icon: vikunja.png
             href: https://vikunja.greyroom.net/
             description: Open-source to-do app 
-        - What's up Docker:
-            icon: whats-up-docker.png
-            href: https://wud.greyroom.net
-            description: Notification system for docker update
-            widget:
-                type: whatsupdocker
-                url: https://wud.greyroom.net
-
 
 
   widgets.yaml: |
