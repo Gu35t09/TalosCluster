@@ -169,11 +169,6 @@ data:
             icon: nginx-proxy-manager.png
             href: https://nginx.greyroom.net
             description: Reverse proxy for all services on docker
-            widget:
-                type: npm
-                url: https://nginx.greyroom.net
-                username: "{{HOMEPAGE_VAR_NPM_USER}}"
-                password: "{{HOMEPAGE_VAR_NPM_PASSWD}}"
         - Paperless-ngx:
             icon: paperless-ngx.png
             href: https://paperless.greyroom.net
