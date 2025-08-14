@@ -163,7 +163,7 @@ data:
                 key: "{{HOMEPAGE_VAR_IMMICH_API_KEY}}"
         - Linkeding:
             icon: linkding.png
-            href: https://plinkding.greyroom.net
+            href: https://linkding.greyroom.net
             description: Self-hosted bookmark manager               
         - Nextcloud:
             icon: nextcloud.png
