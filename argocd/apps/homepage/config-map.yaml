@@ -115,14 +115,6 @@ data:
             icon: opnsense.png
             href: http://opnsense.greyroom.net
             description: NGFW
-        - PiHole:
-            icon: pi-hole.svg
-            href: https://pihole.greyroom.net/admin
-            description: DNS server and AD blocker
-            widget:
-                type: pihole
-                url: https://pihole.greyroom.net
-                key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
     - Services: 
         - Immich:
             icon: immich.png
@@ -154,7 +146,15 @@ data:
         - Paperless-ngx:
             icon: paperless-ngx.png
             href: https://paperless.greyroom.net
-            description: Open-source document management syste
+            description: Open-source document management system
+        - PiHole:
+            icon: pi-hole.svg
+            href: https://pihole.greyroom.net/admin
+            description: DNS server and AD blocker
+            widget:
+                type: pihole
+                url: https://pihole.greyroom.net
+                key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
         - Portainer:
             icon: portainer.png
             href: https://portainer.greyroom.net
