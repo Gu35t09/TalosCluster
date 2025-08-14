@@ -10,8 +10,7 @@ data:
     url: https://pve.greyroom.net:8006
     token: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
     secret: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
-  kubernetes.yaml: |
-    mode: cluster
+  kubernetes.yaml: ""
   settings.yaml: |
     title: My Awesome Homepage 
     theme: dark # <----- add this line
@@ -70,26 +69,6 @@ data:
               href: https://youtube.com/
 
   services.yaml: |
-    - kubernetes:
-        cluster:
-          # Shows cluster-wide statistics
-          show: true
-          # Shows the aggregate CPU stats
-          cpu: true
-          # Shows the aggregate memory stats
-          memory: true
-          # Shows a custom label
-          showLabel: true
-          label: "cluster"
-        nodes:
-          # Shows node-specific statistics
-          show: true
-          # Shows the CPU for each node
-          cpu: true
-          # Shows the memory for each node
-          memory: true
-          # Shows the label, which is always the node name
-          showLabel: true
     - Hypervisor:
         - Tartarus:
             icon: proxmox.png
