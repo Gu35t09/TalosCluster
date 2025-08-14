@@ -48,7 +48,17 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: password
-                  name: nextcloud-passwd                 
+                  name: nextcloud-passwd     
+            - name: HOMEPAGE_VAR_NPM_USER
+              valueFrom:
+                secretKeyRef:
+                  key: user
+                  name: npm-credentials
+            - name: HOMEPAGE_VAR_NPM_PASSWD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: npm-credentials                         
           ports:
             - name: http
               containerPort: 3000

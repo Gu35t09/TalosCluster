@@ -112,6 +112,15 @@ data:
                 url: https://nextcloud.greyroom.net
                 username: mattia
                 password: "{{HOMEPAGE_VAR_NEXTCLOUD_PASSWD}}"
+        - Nginx Proxy Manager:
+            icon: nginx-proxy-manager.png
+            href: https://nginx.greyroom.net
+            description: Reverse proxy for all services on docker
+            widget:
+                type: npm
+                url: http://nginxproxymanager:81
+                username: "{{HOMEPAGE_VAR_NPM_USER}}"
+                password: "{{HOMEPAGE_VAR_NPM_PASSWD}}"
         - Vaultwarden:
             icon: vaultwarden.png
             href: https://vaultwarden.greyroom.net
