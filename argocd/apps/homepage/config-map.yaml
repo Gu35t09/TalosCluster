@@ -152,6 +152,7 @@ data:
         - Paperless-ngx:
             icon: paperless-ngx.png
             href: https://paperless.greyroom.net
+            description: Open-source document management syste
         - Portainer:
             icon: portainer.png
             href: https://portainer.greyroom.net
@@ -168,6 +169,7 @@ data:
         - Vikunja:
             icon: vikunja.png
             href: https://vikunja.greyroom.net/
+            description: Open-source to-do app 
         - What's up Docker:
             icon: whats-up-docker.png
             href: https://wud.greyroom.net
