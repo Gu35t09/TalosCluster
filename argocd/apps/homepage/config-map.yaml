@@ -37,9 +37,6 @@ data:
       GitOps Tools:
       Kubernetes:
       Networking:
-          header: true
-          style: row
-          columns: 4
       Services:
 
   custom.css: ""
