@@ -10,7 +10,26 @@ data:
     url: https://pve.greyroom.net:8006
     token: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
     secret: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
-  kubernetes.yaml: ""  #  mode: cluster
+  kubernetes.yaml: | 
+      cluster:
+          # Shows cluster-wide statistics
+          show: true
+          # Shows the aggregate CPU stats
+          cpu: true
+          # Shows the aggregate memory stats
+          memory: true
+          # Shows a custom label
+          showLabel: true
+          label: "cluster"
+      nodes:
+          # Shows node-specific statistics
+          show: true
+          # Shows the CPU for each node
+          cpu: true
+          # Shows the memory for each node
+          memory: true
+          # Shows the label, which is always the node name
+          showLabel: true
   settings.yaml: |
     title: My Awesome Homepage 
     theme: dark # <----- add this line
@@ -80,6 +99,9 @@ data:
                 username: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
                 password: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
     - Backup:
+        - NAS QNAP TS-212:
+            icon: qnap.png
+            href: https://nas.greyroom.net
         - PBS:
             icon: proxmox-light.png
             href: https://pve.greyroom.net:8007
@@ -146,6 +168,9 @@ data:
                 url: https://nginx.greyroom.net
                 username: "{{HOMEPAGE_VAR_NPM_USER}}"
                 password: "{{HOMEPAGE_VAR_NPM_PASSWD}}"
+        - Paperless-ngx:
+            icon: paperless-ngx.png
+            href: https://paperless.greyroom.net
         - Portainer:
             icon: portainer.png
             href: https://portainer.greyroom.net
@@ -159,6 +184,9 @@ data:
             icon: vaultwarden.png
             href: https://vaultwarden.greyroom.net
             description: Password manager
+        - Vikunja:
+            icon: vikunja.png
+            href: https://vikunja.greyroom.net/
         - What's up Docker:
             icon: whats-up-docker.png
             href: https://wud.greyroom.net
