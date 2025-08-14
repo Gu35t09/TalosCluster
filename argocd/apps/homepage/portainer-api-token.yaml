@@ -1,0 +1,21 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "portainer-api-token",
+    "namespace": "homepage",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "portainer-api-token",
+        "namespace": "homepage",
+        "creationTimestamp": null
+      }
+    },
+    "encryptedData": {
+      "token": "AgCH9EbYjDqOUWQehRybL12HuC6bHqprNL51pxxVK3tFAODoBYKbvBc3kwPEcN/Z/WvWKku5ARlK4jxPUTVw4iQJXWcGkwK+fPWfRt4VIwa+6ajUAwaBwWAA0cJIezMnnRvbmYUIgYl4zvWQQfHefUOoAF3c/GVTpEl0MRDf5vO9sz/CibcnC+cjhiTn5FYDGi7z63+M2PKWztVkiCRLGPnvsGLzq123nRuT3xtRk1GMjKiiJa6DPCEKDjMYrmdVP+Iz8G3T02rDNBjEivgqfCeMePnTHv3hxz8TB+Obl09pa9RMG63LXrivGI6SXLVqF0TpFC3esrmGiq+CWj6sx+NgyEJ3Ba6cpzLAzaYsQ2TJwOuPxlpUQaaYE0ynKGAlD5OH19pxvW/i4KIjwbFq9sHotwJU1SVs5AuY2KELqUnHE1hiMVIETKlwEmB1Ke6yNamcuooC6xeS8WDwePMhRL5WAVHsH/oPGYpam9MbzoaElgvLuLsQ+y3iXwxI15Y15EjhVG3o1Vw1QiTDHxRRV/Z99bvwYLd/ToHSh7IjoUAv5ENWfwnNQOOhsw45nRP7Z1qjkHFNg3L9JhVsNeT7tjq9Wrq9H3hznZcpZEBOMtmlSWzJY12PEW6Z8BG2nONLByN6qMB2rhD5gZG/XGB6KoKE1OJCbWTctLYmge05qQpOuShmhJrWsQ7lPbll2mWWNri3v3pP/JsMc4t4SdbD+w1mnfMANcykYmcJAOKuO40A/Y944wHijV+WLuFocRBbar8="
+    }
+  }
+}

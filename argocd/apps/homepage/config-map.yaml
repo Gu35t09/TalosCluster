@@ -121,6 +121,15 @@ data:
                 url: https://nginx.greyroom.net
                 username: "{{HOMEPAGE_VAR_NPM_USER}}"
                 password: "{{HOMEPAGE_VAR_NPM_PASSWD}}"
+        - Portainer:
+            icon: portainer.png
+            href: https://portainer.greyroom.net
+            description: Container management software
+            widget:
+                type: portainer
+                url: https://portainer.greyroom.net
+                env: 2
+                key: "{{HOMEPAGE_VAR_PORTAINER_API_TOKEN}}"
         - Vaultwarden:
             icon: vaultwarden.png
             href: https://vaultwarden.greyroom.net

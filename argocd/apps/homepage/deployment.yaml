@@ -58,7 +58,12 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: password
-                  name: npm-credentials                         
+                  name: npm-credentials   
+            - name: HOMEPAGE_VAR_PORTAINER_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  key: token
+                  name: portainer-api-token                       
           ports:
             - name: http
               containerPort: 3000
