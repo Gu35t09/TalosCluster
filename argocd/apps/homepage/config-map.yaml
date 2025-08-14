@@ -90,7 +90,7 @@ data:
                 url: https://pve.greyroom.net:8007
                 username: xx
                 password: xx
-    - GitOps Tools:
+    - Kubernetes:
         - ArgoCD:
             icon: argo-cd.png
             href: https://argocd.greyroom.net
@@ -99,7 +99,6 @@ data:
                 type: argocd
                 url: https://argocd.greyroom.net
                 key: "{{HOMEPAGE_VAR_ARGOCD_API_KEY}}"
-    - Kubernetes:
         - Longhorn:
             icon: longhorn.png
             href: https://longhorn.greyroom.net
