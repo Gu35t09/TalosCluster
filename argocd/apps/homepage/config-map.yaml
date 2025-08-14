@@ -26,7 +26,7 @@ data:
       openwe  athermap: openweathermapapikey
       weatherapi: weathe
 
-    useEqualHeights: true
+    useEqualHeights: false
 
     layout:
       Hypervisor:
@@ -88,7 +88,7 @@ data:
         - NAS QNAP TS-212:
             icon: qnap.png
             href: https://nas.greyroom.net
-            descriptio: NAS QNAP TS-212 used for backup
+            description: NAS QNAP TS-212 used for backup
         - PBS:
             icon: proxmox-light.png
             href: https://pve.greyroom.net:8007
