@@ -41,7 +41,7 @@ data:
       Services:
         header: true
         style: row
-        columns: 3
+        columns: 4
 
   custom.css: ""
   custom.js: ""
