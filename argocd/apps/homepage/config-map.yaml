@@ -114,10 +114,6 @@ data:
                 url: https://pve.greyroom.net:8007
                 username: xx
                 password: xx
-    - Applicativi:
-
-    - Servizi:
-
     - Network:
         - OpenSense FW:
             icon: opnsense.png
