@@ -85,6 +85,15 @@ data:
                 url: https://pve.greyroom.net:8007
                 username: xx
                 password: xx
+    - GitOps Tool:
+        - ArgoCD:
+            icon: argo-cd.png
+            href: https://argocd.greyroom.net
+            description: Declerative GitOps CD for Kubernetes
+            widget:
+                type: argocd
+                url: https://argocd.greyroom.net
+                key: "{{HOMEPAGE_VAR_ARGOCD_API_KEY}}"
     - Networking:
         - AP:
             icon: raspberrypi.png

@@ -68,7 +68,12 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: key
-                  name: immich-api-key                   
+                  name: immich-api-key    
+            - name: HOMEPAGE_VAR_ARGOCD_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: key
+                  name: argocd-api-key                 
           ports:
             - name: http
               containerPort: 3000
