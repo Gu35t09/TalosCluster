@@ -29,14 +29,14 @@ data:
     useEqualHeights: true
 
     layout:
-      Hypervisor:
-        header: true
-        style: row
-        columns: 1
       Backup:
         header: true      
       Docker:
-        header: true      
+        header: true   
+      Hypervisor:
+        header: true
+        style: row
+        columns: 1   
       Kubernetes:
         header: true      
       Networking:
