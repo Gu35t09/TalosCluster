@@ -34,7 +34,7 @@ data:
         style: row
         columns: 1
       Backup:
-      GitOps:
+      GitOps Tools:
       Networking:
       Services:
           header: true
@@ -89,7 +89,7 @@ data:
                 url: https://pve.greyroom.net:8007
                 username: xx
                 password: xx
-    - GitOps Tool:
+    - GitOps Tools:
         - ArgoCD:
             icon: argo-cd.png
             href: https://argocd.greyroom.net
