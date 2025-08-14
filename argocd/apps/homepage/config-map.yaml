@@ -87,23 +87,6 @@ data:
                 url: https://pve.greyroom.net:8006
                 username: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
                 password: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
-    - Kubernetes Cluster:
-        - k8s-talos-cp01:
-            icon: proxmox.png
-            description: Talos Cluster Control Plane 01
-            proxmoxNode: pve
-            proxmoxVMID: 201
-        - k8s-talos-wrk01:
-            icon: proxmox.png
-            description: Talos Cluster Worker 01
-            proxmoxNode: pve
-            proxmoxVMID: 204
-    - Docker host:
-        - pandora:
-            icon: proxmox.png
-            description: Ubuntu server with Docker engine installed
-            proxmoxNode: pve
-            proxmoxVMID: 204
     - Backup:
         - PBS:
             icon: proxmox-light.png
@@ -114,7 +97,11 @@ data:
                 url: https://pve.greyroom.net:8007
                 username: xx
                 password: xx
-    - Network:
+    - Networking:
+        - AP:
+            icon: raspberrypi.png
+            href: https://192.168.100.3
+            description: Raspberry Pi Access Point
         - OpenSense FW:
             icon: opnsense.png
             href: http://opnsense.greyroom.net
@@ -127,6 +114,20 @@ data:
                 type: pihole
                 url: https://pihole.greyroom.net
                 key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
+    - Services: 
+        - Nextcloud:
+            icon: nextcloud.png
+            href: https://nextcloud.greyroom.net
+            description: Cloud file storage and collaboration software
+            widget:
+                type: nextcloud
+                url: https://nextcloud.greyroom.net
+                username: mattia
+                password: "{{HOMEPAGE_VAR_NEXTCLOUD_PASSWD}}"
+        - Vaultwarden:
+            icon: vaultwarden.png
+            href: https://vaultwarden.greyroom.net
+            description: Password manager
 
 
 

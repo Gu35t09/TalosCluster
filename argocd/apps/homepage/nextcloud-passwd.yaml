@@ -1,0 +1,21 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "nextcloud-passwd",
+    "namespace": "homepage",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "nextcloud-passwd",
+        "namespace": "homepage",
+        "creationTimestamp": null
+      }
+    },
+    "encryptedData": {
+      "password": "AgCEQClLmDakp9ATE7p7qAM3hmHvWgga+TYezg5FQJQKq6Ga+gmH2Y9jQR68YnFbhk9U2Lr2zUlpasAoFk5EysfoUPLMKD52zqNE+uqjXS8rYuNvxPxBynbBn00zYDNtlamDxYwNvkIuUa4XDdHY785Wf/V/sevT8NpXwCmciO7fUemRfLjqS89zhChYVM1sb2lBGWamHJ2wRuDuYGGUzOFCTTCmxXoaM1x5DzDOqjvYKtqQz/5X+ZYzEXLN8tobbxAbmFYJ3x2r812Z0t06p+8Zqeyian5PxUPofpbyNdkWh3eL+9V4DAmsE4LYEXGw8nLbo6OHoPTKPoJ0vl/gRhrnC057yYcfU8NYCJGPSJDw2V7e13+cKzdk8KS8jVa8eGVx5Vce1Mvmj4gEqOSzvqdpcsQfXq81G45D+jIlkPlIcJFAxdy+TMwrigo+ZUnRtMPXy4b6UEmT1ea2GysjEhUjDmKtnF3ALNOR09xU/UB8BOg7a3UEyjZLOfkAuxn78KfO7hVoXRYcKjw5XzKEHf9WJ0mk08mMMCJa/tPhedSkXr3KfqxJxh4+bXx9v+jiekZlkMlAB6r9SQDwccD3mwmrlZ2uqZwJrOmOllBI4Bauvc4cf7SzEcNGkd+W9ZOCx29TrWvNKbZfQkpEN1es/9Qj3alAtu2oxjDuJLNbtDCYzWkhZJsz32e9WsINc0qc5rbpTKZHNBh8AVQlzdwfx+Rd5pw6bkxhVS96NPJTVQ=="
+    }
+  }
+}

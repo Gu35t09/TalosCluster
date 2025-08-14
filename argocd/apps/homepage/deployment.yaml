@@ -44,6 +44,11 @@ spec:
                 secretKeyRef:
                   key: key
                   name: pihole-api-key 
+            - name: HOMEPAGE_VAR_NEXTCLOUD_PASSWD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: nextcloud-passwd                 
           ports:
             - name: http
               containerPort: 3000
