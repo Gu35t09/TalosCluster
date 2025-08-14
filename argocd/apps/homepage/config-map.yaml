@@ -35,7 +35,7 @@ data:
         columns: 1
       Backup:
       Databases:
-      Docker
+      Docker:
       Kubernetes:
       Networking:
       Services:
@@ -113,7 +113,6 @@ data:
             widget:
                 type: whatsupdocker
                 url: https://wud.greyroom.net
-
     - Kubernetes:
         - ArgoCD:
             icon: argo-cd.png
