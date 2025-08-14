@@ -82,7 +82,7 @@ spec:
             - name: HOMEPAGE_VAR_OPNSENSE_API_TOKEN
               valueFrom:
                 secretKeyRef:
-                  key: token
+                  key: secret
                   name: opnsense-api-credentials                                              
           ports:
             - name: http
