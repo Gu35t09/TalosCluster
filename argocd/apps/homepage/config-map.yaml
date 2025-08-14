@@ -110,11 +110,6 @@ data:
             icon: opnsense.png
             href: http://opnsense.greyroom.net
             description: NGFW
-            widget:
-              type: opnsense
-              url: http://opnsense.greyroom.net
-              username: "{{HOMEPAGE_VAR_OPNSENSE_API_KEY}}"
-              password: "{{HOMEPAGE_VAR_OPNSENSE_API_TOKEN}}"
         - PiHole:
             icon: pi-hole.svg
             href: https://pihole.greyroom.net/admin

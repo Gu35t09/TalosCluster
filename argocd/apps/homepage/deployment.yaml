@@ -73,17 +73,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: key
-                  name: argocd-api-key            
-            - name: HOMEPAGE_VAR_OPNSENSE_API_KEY
-              valueFrom:
-                secretKeyRef:
-                  key: key
-                  name: opnsense-api-credentials     
-            - name: HOMEPAGE_VAR_OPNSENSE_API_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  key: secret
-                  name: opnsense-api-credentials                                              
+                  name: argocd-api-key                                                      
           ports:
             - name: http
               containerPort: 3000
