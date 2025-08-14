@@ -38,6 +38,9 @@ data:
       Kubernetes:
       Networking:
       Services:
+        header: true
+        style: row
+        columns: 4
 
   custom.css: ""
   custom.js: ""
