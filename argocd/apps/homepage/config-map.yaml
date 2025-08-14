@@ -38,7 +38,13 @@ data:
       Docker:
       Kubernetes:
       Networking:
+        header: true
+        style: row
+        columns: 4
       Services:
+        header: true
+        style: row
+        columns: 7
 
   custom.css: ""
   custom.js: ""
