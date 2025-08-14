@@ -134,6 +134,13 @@ data:
             icon: vaultwarden.png
             href: https://vaultwarden.greyroom.net
             description: Password manager
+        - What's up Docker:
+            icon: whats-up-docker.png
+            href: https://wud.greyroom.net
+            description: Notification system for docker update
+            widget:
+                type: whatsupdocker
+                url: https://wud.greyroom.net
 
 
 
