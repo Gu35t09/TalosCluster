@@ -34,7 +34,7 @@ data:
         style: row
         columns: 1
       Backup:
-      GitOps Tools:
+      Databases:
       Kubernetes:
       Networking:
       Services:
@@ -110,10 +110,10 @@ data:
         - Longhorn:
             icon: longhorn.png
             href: https://longhorn.greyroom.net
-            description: Cloud native distributed block storage
+            description: Cloud native distributed block storage for Kubernetes
     - Networking:
         - AP:
-            icon: raspberrypi.png
+            icon: raspberry-pi.png
             href: https://192.168.100.3
             description: Raspberry Pi Access Point
         - Mikrotik CRS310-8G+2S+IN:
@@ -121,8 +121,12 @@ data:
             description: Switch Mikrotik
         - OpenSense Firewall:
             icon: opnsense.png
-            href: http://opnsense.greyroom.net
+            href: https://opnsense.greyroom.net
             description: NGFW
+        - Router:
+            icon: router.png
+            href: https://router.greyroom.net
+            description: ISP Router
     - Services: 
         - Immich:
             icon: immich.png
