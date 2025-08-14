@@ -93,6 +93,11 @@ data:
                 url: https://pve.greyroom.net:8007
                 username: xx
                 password: xx
+    - Databases:
+        - pgAdmin:
+            icon: pgadmin.png
+            href: https://pgadmin.greyroom.net/
+            description: PostgreSQL Tools
     - Kubernetes:
         - ArgoCD:
             icon: argo-cd.png
