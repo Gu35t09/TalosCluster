@@ -34,16 +34,10 @@ data:
         style: row
         columns: 1
       Backup:
-      Databases:
-      DNS: 
-        header: true
-        style: row
       Docker:
       Kubernetes:
       Networking:
-        header: true
-        style: row
-        columns: 5
+      Miscellaneous:
       Services:
         header: true
         style: row
@@ -101,20 +95,6 @@ data:
                 url: https://pve.greyroom.net:8007
                 username: xx
                 password: xx
-    - Databases:
-        - pgAdmin:
-            icon: pgadmin.png
-            href: https://pgadmin.greyroom.net/
-            description: PostgreSQL Tools
-    - DNS:
-        - Pi-Hole:
-            icon: pi-hole.svg
-            href: https://pihole.greyroom.net/admin
-            description: DNS server and AD blocker
-            widget:
-                type: pihole
-                url: https://pihole.greyroom.net
-                key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
     - Docker:
         - Portainer:
             icon: portainer.png
@@ -145,6 +125,11 @@ data:
             icon: longhorn.png
             href: https://longhorn.greyroom.net
             description: Cloud native distributed block storage for Kubernetes
+    - Miscellaneous:
+        - pgAdmin:
+            icon: pgadmin.png
+            href: https://pgadmin.greyroom.net/
+            description: PostgreSQL Tools
     - Networking:
         - AP:
             icon: raspberry-pi.png
@@ -193,6 +178,14 @@ data:
             icon: paperless-ngx.png
             href: https://paperless.greyroom.net
             description: Open-source document management system
+        - Pi-Hole:
+            icon: pi-hole.svg
+            href: https://pihole.greyroom.net/admin
+            description: DNS server and AD blocker
+            widget:
+                type: pihole
+                url: https://pihole.greyroom.net
+                key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
         - Vaultwarden:
             icon: vaultwarden.png
             href: https://vaultwarden.greyroom.net
