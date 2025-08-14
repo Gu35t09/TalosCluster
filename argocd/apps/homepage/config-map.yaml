@@ -33,21 +33,9 @@ data:
         header: true
         style: row
         columns: 1
-      Docker:
-        header: true
-        style: row
-        columns: 3
       Backup:
-      Cloud services:
       Networking:
-      Streaming:
-        header: true
-        style: row
-        columns: 5
-      Other:
-        header: true
-        style: row
-        columns: 2
+      Services:
 
   custom.css: ""
   custom.js: ""
