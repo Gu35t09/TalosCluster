@@ -106,7 +106,7 @@ data:
                 type: argocd
                 url: https://argocd.greyroom.net
                 key: "{{HOMEPAGE_VAR_ARGOCD_API_KEY}}"
-    -Kubernets:
+    - Kubernets:
         - Longhorn:
             icon: longhorn.png
             href: https://longhorn.greyroom.net
