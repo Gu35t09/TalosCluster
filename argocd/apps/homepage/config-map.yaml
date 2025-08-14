@@ -34,10 +34,15 @@ data:
         style: row
         columns: 1
       Backup:
+        header: true      
       Docker:
+        header: true      
       Kubernetes:
+        header: true      
       Networking:
+        header: true      
       Miscellaneous:
+        header: true      
       Services:
         header: true
         style: row
