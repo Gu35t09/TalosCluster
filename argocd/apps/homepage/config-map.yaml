@@ -104,6 +104,35 @@ data:
             description: Ubuntu server with Docker engine installed
             proxmoxNode: pve
             proxmoxVMID: 204
+    - Backup:
+        - PBS:
+            icon: proxmox-light.png
+            href: https://pve.greyroom.net:8007
+            description: Proxmox Backup Server
+            widget:
+                type: proxmoxbackupserver
+                url: https://pve.greyroom.net:8007
+                username: xx
+                password: xx
+    - Applicativi:
+
+    - Servizi:
+
+    - Network:
+        - OpenSense FW:
+            icon: opnsense.png
+            href: http://opnsense.greyroom.net
+            description: NGFW
+        - PiHole:
+            icon: pi-hole.svg
+            href: https://pihole.greyroom.net/admin
+            description: DNS server and AD blocker
+            widget:
+                type: pihole
+                url: https://pihole.greyroom.net
+                key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
+
+
 
   widgets.yaml: |
     - resources:

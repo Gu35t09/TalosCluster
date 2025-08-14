@@ -1,0 +1,21 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "pihole-api-key",
+    "namespace": "homepage",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "pihole-api-key",
+        "namespace": "homepage",
+        "creationTimestamp": null
+      }
+    },
+    "encryptedData": {
+      "key": "AgA+rc3iTDH57pxuPE51m4gP+yF/l/M22TWwsDGNHxONnAbtw7dPs4yjWACJiEMlIDRG0X2YOFm8X65OvOkpRDq24bpr3j3ZRzU3OrHGSxOoImKZsA/H2F6z5d47ua6qey6xPCX+rMZr4k5jto8llaGPnD87FxTETKJojS+vISuWP0uqRfhB1+ohh8U5gw+5Iro3mG3LAbmRrlNRjKWzr/eR1mK9muKJDur2mvAkf0t2rbziF0y4Fb2NGW3bwnJe4Gi3yN9BCmKFIiyIsWyiLRYiZEPG60JnG/ZGecqP3j9I9dSgsKnQsv4HACFO1DqggWONKV7Qbm8Iilyb85Oe99i4UHR5jXJXdmITyC6RinIAWa96WjmDPCYXpGVYqWdDRXGncvktCWo7HxkBHMzcxhqwmr6+Ox0s22kFFypVS5iw5G1J/m+nw9uJp6S5Mne4l5HCub/LOBeNA113ILfTHwfnHKd5L4x68wFN2ZZumsepMlRo9J7PE05UuHN0dtql6gWpQRtCblcgFfX7xrCaVJlCGjU2L5AzxwQ5ecOHllmjFu2/oA944pc1kNG86s25pEeCxR8TJfwCuWvSKm+Z4pbhYxSfmdFL7fGrz/r+WzHWvKnECnBoi0VbUcAJM5aRsTpV3uogf416ex3rVN29Az38/IG/Gte/sTtvUMM/eNd+NXcxhZqFERNLDX/DhPeuT8KOO0ZWgS4GKh9rO993ZGtGNJO0+WlEHHb9cqJJBlII6Ag0dNaaA2qiDXDq4mqIfTs+JnFHjURKMS/fPs+z9xAy"
+    }
+  }
+}

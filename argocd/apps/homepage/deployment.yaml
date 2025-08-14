@@ -39,6 +39,11 @@ spec:
                 secretKeyRef:
                   key: secret
                   name: proxmox-api-secret
+            - name: HOMEPAGE_VAR_PIHOLE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: key
+                  name: pihole-api-key 
           ports:
             - name: http
               containerPort: 3000
