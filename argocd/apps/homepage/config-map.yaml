@@ -29,14 +29,14 @@ data:
     useEqualHeights: true
 
     layout:
+      Awesome Self-hosted:
+        header: true
+        style: row
+        columns: 1
       Backup:
         header: true      
       Docker:
-        header: true   
-      Hypervisor:
-        header: true
-        style: row
-        columns: 1   
+        header: true      
       Kubernetes:
         header: true      
       Networking:
@@ -76,7 +76,7 @@ data:
               href: https://youtube.com/
 
   services.yaml: |
-    - Hypervisor:
+    - Awesome Self-hosted:
         - Tartarus:
             icon: proxmox.png
             href: https://pve.greyroom.net:8006
