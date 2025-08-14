@@ -40,11 +40,11 @@ data:
       Networking:
         header: true
         style: row
-        columns: 4
+        columns: 5
       Services:
         header: true
         style: row
-        columns: 4
+        columns: 3
 
   custom.css: ""
   custom.js: ""
@@ -145,6 +145,14 @@ data:
             icon: opnsense.png
             href: https://opnsense.greyroom.net
             description: NGFW
+        - Pi-Hole:
+            icon: pi-hole.svg
+            href: https://pihole.greyroom.net/admin
+            description: DNS server and AD blocker
+            widget:
+                type: pihole
+                url: https://pihole.greyroom.net
+                key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
         - Router:
             icon: router.png
             href: https://router.greyroom.net
@@ -181,14 +189,6 @@ data:
             icon: paperless-ngx.png
             href: https://paperless.greyroom.net
             description: Open-source document management system
-        - Pi-Hole:
-            icon: pi-hole.svg
-            href: https://pihole.greyroom.net/admin
-            description: DNS server and AD blocker
-            widget:
-                type: pihole
-                url: https://pihole.greyroom.net
-                key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
         - Vaultwarden:
             icon: vaultwarden.png
             href: https://vaultwarden.greyroom.net
