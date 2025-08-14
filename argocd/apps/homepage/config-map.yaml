@@ -26,7 +26,7 @@ data:
       openwe  athermap: openweathermapapikey
       weatherapi: weathe
 
-    useEqualHeights: false
+    useEqualHeights: true
 
     layout:
       Hypervisor:
@@ -88,6 +88,7 @@ data:
         - NAS QNAP TS-212:
             icon: qnap.png
             href: https://nas.greyroom.net
+            descriptio: NAS QNAP TS-212 used for backup
         - PBS:
             icon: proxmox-light.png
             href: https://pve.greyroom.net:8007
@@ -180,7 +181,7 @@ data:
             icon: paperless-ngx.png
             href: https://paperless.greyroom.net
             description: Open-source document management system
-        - PiHole:
+        - Pi-Hole:
             icon: pi-hole.svg
             href: https://pihole.greyroom.net/admin
             description: DNS server and AD blocker
