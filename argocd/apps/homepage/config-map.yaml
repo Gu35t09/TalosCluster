@@ -77,10 +77,10 @@ data:
 
   services.yaml: |
     - Hypervisor:
-        - Tartarus:
+        - PVE:
             icon: proxmox.png
             href: https://pve.greyroom.net:8006
-            description: Proxmox VE
+            description: Proxmox VE node 01
             widget:
                 type: proxmox
                 url: https://pve.greyroom.net:8006
