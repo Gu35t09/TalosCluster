@@ -416,7 +416,6 @@ velero:
       #  Option to skip certificate validation or not if insecureSkipTLSVerify is set to be true, the client side should set the
       #  flag. For Velero client Command like velero backup describe, velero backup logs needs to add the flag --insecure-skip-tls-verify
       #  insecureSkipTLSVerify:
-
       # annotations allows adding arbitrary annotations to this BackupStorageLocation resource. Optional.
       annotations: {}
 
@@ -565,7 +564,9 @@ velero:
     extraArgs: []
 
     # Additional values to be used as environment variables. Optional.
-    extraEnvVars: []
+    extraEnvVars:
+      - name: AWS_EC2_METADATA_DISABLED
+        value: "true"
       # Simple value
       # - name: SIMPLE_VAR
       #   value: "simple-value"
