@@ -564,9 +564,9 @@ velero:
     extraArgs: []
 
     # Additional values to be used as environment variables. Optional.
-    extraEnvVars:
-      - name: AWS_EC2_METADATA_DISABLED
-        value: "true"
+    #extraEnvVars:
+    #  - name: AWS_EC2_METADATA_DISABLED
+    #    value: "true"
       # Simple value
       # - name: SIMPLE_VAR
       #   value: "simple-value"
