@@ -422,20 +422,20 @@ velero:
 
     # Parameters for the VolumeSnapshotLocation(s). Configure multiple by adding other element(s) to the volumeSnapshotLocation slice.
     # See https://velero.io/docs/v1.6/api-types/volumesnapshotlocation/
-    volumeSnapshotLocation:
+    #volumeSnapshotLocation:
       # name is the name of the volume snapshot location where snapshots are being taken. If a name is not provided,
       # a volume snapshot location will be created with the name "default". Optional.
-    - name:
+    #- name:
       # provider is the name for the volume snapshot provider.
-      provider: ""
-      credential:
+    #  provider: ""
+    #  credential:
         # name of the secret used by this volumeSnapshotLocation.
-        name:
+    #    name:
         # name of key that contains the secret data to be used.
-        key:
+    #    key:
       # Additional provider-specific configuration. See link above
       # for details of required/optional fields for your provider.
-      config: {}
+    #  config: {}
     #    region:
     #    apiTimeout:
     #    resourceGroup:
@@ -446,7 +446,7 @@ velero:
     #    project:
 
       # annotations allows adding arbitrary annotations to this VolumeSnapshotLocation resource. Optional.
-      annotations: {}
+    #  annotations: {}
 
     # These are server-level settings passed as CLI flags to the `velero server` command. Velero
     # uses default values if they're not passed in, so they only need to be explicitly specified
