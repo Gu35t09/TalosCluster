@@ -391,7 +391,7 @@ velero:
       accessMode: ReadWrite
       credential:
         # name of the secret used by this backupStorageLocation.
-        name: garage-s3-velero-backup-credentials
+        name: garage-s3-velero-bucket-credentials
         # name of key that contains the secret data to be used.
         key: credentials
       # Additional provider-specific configuration. See link above
