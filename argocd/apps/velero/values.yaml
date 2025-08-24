@@ -396,11 +396,11 @@ velero:
         key: credentials
       # Additional provider-specific configuration. See link above
       # for details of required/optional fields for your provider.
-        config:
-          region: garage
-          checksumAlgorithm: ""
-          s3ForcePathStyle: true
-          s3Url: https://garage.greyroom.net
+      config:
+        region: garage
+        checksumAlgorithm: ""
+        s3ForcePathStyle: true
+        s3Url: https://garage.greyroom.net
       #  region:
       #  s3ForcePathStyle:
       #  s3Url:
