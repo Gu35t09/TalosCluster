@@ -153,7 +153,7 @@ velero-ui:
   # Configure the ingress resource that allows you to access the
   ingress:
     # -- Enable ingress controller resource
-    enabled: false
+    enabled: true
 
     # -- IngressClass that will be used to implement the Ingress (Kubernetes 1.18+)
     className: ""
