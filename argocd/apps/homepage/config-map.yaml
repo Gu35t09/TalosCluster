@@ -93,7 +93,7 @@ data:
             description: NAS QNAP TS-212 used for backup
         - PBS:
             icon: proxmox-light.png
-            href: https://pbd.greyroom.net:8007
+            href: https://pbs.greyroom.net:8007
             description: Proxmox Backup Server
             widget:
                 type: proxmoxbackupserver
