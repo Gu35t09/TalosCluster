@@ -32,7 +32,7 @@ data:
       Hypervisor:
         header: false
         style: row
-        columns: 2
+        columns: 1
       Backup:
         header: true      
       Docker:
@@ -77,19 +77,10 @@ data:
 
   services.yaml: |
     - Hypervisor:
-        - PVE:
-            icon: proxmox.png
-            href: https://pve.greyroom.net:8006
-            description: Proxmox VE node 01
-            widget:
-                type: proxmox
-                url: https://pve.greyroom.net:8006
-                username: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
-                password: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
-        - PVE02:
+        - Proxmox:
             icon: proxmox.png
             href: https://pve02.greyroom.net:8006
-            description: Proxmox VE node 02
+            description: Proxmox VE
             widget:
               type: proxmox
               url: https://pve02.greyroom.net:8006
