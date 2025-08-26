@@ -92,7 +92,7 @@ data:
             description: Proxmox VE node 02
             widget:
               type: proxmox
-              url: https://pve02.greyroom.net
+              url: https://pve02.greyroom.net:8006
               username: {{HOMEPAGE_VAR_PROXMOX_API_TOKEN}}
               password: {{HOMEPAGE_VAR_PROXMOX_API_SECRET}}
     - Backup:
