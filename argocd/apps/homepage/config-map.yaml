@@ -102,11 +102,11 @@ data:
             description: NAS QNAP TS-212 used for backup
         - PBS:
             icon: proxmox-light.png
-            href: https://pve.greyroom.net:8007
+            href: https://pbd.greyroom.net:8007
             description: Proxmox Backup Server
             widget:
                 type: proxmoxbackupserver
-                url: https://pve.greyroom.net:8007
+                url: https://pbs.greyroom.net:8007
                 username: {{HOMEPAGE_VAR_PBS_API_TOKEN}}
                 password: {{HOMEPAGE_VAR_PBS_API_SECRET}}
     - Docker:
