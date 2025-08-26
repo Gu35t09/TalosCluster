@@ -74,6 +74,16 @@ spec:
                 secretKeyRef:
                   key: key
                   name: argocd-api-key  
+            - name: HOMEPAGE_VAR_PBS_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  key: token
+                  name: pbs-api-credentials
+            - name: HOMEPAGE_VAR_PBS_API_SECRET
+              valueFrom:
+                secretKeyRef:
+                  key: secret
+                  name: pbs-api-credentials
                                                     
           ports:
             - name: http
@@ -109,16 +119,6 @@ spec:
               subPath: proxmox.yaml
             - mountPath: /app/config/logs
               name: logs
-            - name: HOMEPAGE_VAR_PBS_API_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  key: token
-                  name: pbs-api-credentials
-            - name: HOMEPAGE_VAR_PBS_API_SECRET
-              valueFrom:
-                secretKeyRef:
-                  key: secret
-                  name: pbs-api-credentials
       volumes:
         - name: homepage-config
           configMap:
