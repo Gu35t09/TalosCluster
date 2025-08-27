@@ -9,8 +9,6 @@ spec:
     initdb:
       database: paperless-ngx
       owner: app
-      #secret:
-      #  name: paperless-cnpg-db-app-password
       
   storage:
     size: 1Gi
