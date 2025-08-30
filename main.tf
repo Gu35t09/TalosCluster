@@ -49,7 +49,7 @@ resource "proxmox_virtual_environment_vm" "cp-vm" {
     ssd = true
     file_format = "raw"
     iothread = true
-    backup = false
+    backup = true
   }
   network_device {
     bridge = var.cp_network_bridge
@@ -103,7 +103,7 @@ resource "proxmox_virtual_environment_vm" "worker-vm" {
     ssd = true
     file_format = "raw"
     iothread = true
-    backup = false
+    backup = true
   }
   disk {
     datastore_id = var.worker_vm_datastore
@@ -112,7 +112,7 @@ resource "proxmox_virtual_environment_vm" "worker-vm" {
     ssd = true
     file_format = "raw"
     iothread = true
-    backup = false
+    backup = true
   }
   network_device {
     bridge = var.worker_network_bridge
