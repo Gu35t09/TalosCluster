@@ -131,6 +131,14 @@ data:
             href: https://longhorn.greyroom.net
             description: Cloud native distributed block storage for Kubernetes
     - Miscellaneous:
+        - Gotify:
+            icon: gotify.png
+            hfref: https://gotify.greyroom.net/
+            description: Notification Center
+            widget:
+                type: gotify
+                url: https://gotify.greyroom.net/
+                key: {{HOMEPAGE_VAR_GOTIFY_API_KEY}}
         - pgAdmin:
             icon: pgadmin.png
             href: https://pgadmin.greyroom.net/

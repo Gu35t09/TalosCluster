@@ -84,6 +84,11 @@ spec:
                 secretKeyRef:
                   key: secret
                   name: pbs-api-credentials
+            - name: HOMEPAGE_VAR_GOTIFY_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: key
+                  name: gotify-api-key
                                                     
           ports:
             - name: http
