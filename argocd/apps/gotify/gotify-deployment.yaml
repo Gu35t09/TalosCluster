@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gotify
+  namespace: gotify
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: gotify
+  template:
+    metadata:
+      labels:
+        app: gotify
+    spec:
+      containers:
+      - name: gotify
+        image: ghcr.io/gotify/server:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: GOTIFY_DEFAULTUSER_PASS
+          valueFrom:
+            secretKeyRef:
+              name: gotify-secrets
+              key: GOTIFY_DEFAULTUSER_PASS
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: gotify-pvc

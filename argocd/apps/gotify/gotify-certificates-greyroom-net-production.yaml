@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: gotify-certificates-greyroom-net-production
+  namespace: gotify
+spec:
+  secretName: gotify-certificates-greyroom-net-production
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "gotify.greyroom.net"
+  dnsNames:
+    - "gotify.greyroom.net"
