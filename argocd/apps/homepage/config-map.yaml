@@ -42,7 +42,9 @@ data:
       Networking:
         header: true      
       Miscellaneous:
-        header: true      
+        header: true 
+        style: row
+        columns: 2     
       Services:
         header: true
         style: row
