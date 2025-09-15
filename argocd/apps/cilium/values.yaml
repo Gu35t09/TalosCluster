@@ -1,4 +1,5 @@
 cilium:
+  namespaceOverride: "kube-system"
   operator:
     replicas: 1
     unmanagedPodWatcher:
